@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- added JQuery hosted library of "https://developers.google.com/speed/libraries#jquery" -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- this thing is enabling drag and drop -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./script.js"></script>
+    <title> GRID GAME - Img Puzzle</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">GridGame - Image Puzzle</h1>
+    <hr>
+    <div class="container">
+        <!-- Container for the Entire Puzzle -->
+        <div class="wrapper">
+            <!-- Wrapping up the contents within the Container -->
+
+            <ul class="puzzle_box">
+                <!-- Contains the Puzzle-->
+            </ul>
+
+            <div class="console_wrapper">
+                <h3 id="actualText">Actual Image</h3>
+                <!-- Contains the Console of the Puzzle and original Image -->
+                <img id="actualimg">
+
+                <!-- choosing difficulty levels -->
+                <fieldset>
+                    <legend>
+                        Choose the Difficulty level
+                    </legend>
+                    <div class="buttons_box">
+                        <input type="radio" name="level" value="3" id="three" checked> Novice
+                        <input type="radio" name="level" value="4" id="four"> Normal
+                        <input type="radio" name="level" value="5" id="five"> Challenger
+                    </div>
+                </fieldset>
+
+                <!-- console buttons -->
+                <button id="anoImg" onclick="window.location.reload()">Another Image</button>
+                <button id="rule"
+                    onclick="alert('Re arrange the parts in a way that it matches the actual picture.')">How
+                    To Play!</button>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- if puzzle get sorted successfully -->
+    <div class="results" style="display: none;">
+        <div style="background-color: rgb(153, 218, 151);align-content: top;">
+            <h4>Congratulations! You have completed the Puzzle</h4>
+            <button class="play_again" onclick="window.location.reload(true)">Play Again</button>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
